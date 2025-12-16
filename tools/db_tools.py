@@ -209,7 +209,7 @@ class DBTools:
             (self.update_task, "update_task", "Update details of a task by its ID"),
         ]
         for method, name, desc in tools:
-            self.mcp.tool(method, name=name, description=desc)
+            self.mcp.tool(method, name=name, description=desc, tags=["tasks", "db operations"])
             logger.info("="*40)
             logger.info(f"Registered tool: {name}")
         logger.info("="*40)
@@ -240,4 +240,5 @@ class DBTools:
            todo_prompt_template,
            name="todo_prompt",
         )
+
 
