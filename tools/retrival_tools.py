@@ -54,8 +54,9 @@ class RetrievalTools:
             ),
         ]
         for method, name, desc in tools:
-            self.mcp.tool(method, name=name, description=desc)
+            self.mcp.tool(method, name=name, description=desc, tags=["rag", "retrival"])
             logger.info("="*40)
             logger.info(f"Registered tool: {name}")
         logger.info("="*40)
         
+
