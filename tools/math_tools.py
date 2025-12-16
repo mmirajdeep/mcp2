@@ -88,9 +88,10 @@ class MathTools:
         logger.info("="*40)
         
         for method, name, desc in tools:
-            self.mcp.tool(method, name=name, description=desc)
+            self.mcp.tool(method, name=name, description=desc, tags=["calculation", "math"])
             logger.info(f"✓ Registered tool: {name} - {desc}")
         
         logger.info("="*40)
         logger.info(f"Successfully registered {len(tools)} math tools")
+
         logger.info("="*40)
