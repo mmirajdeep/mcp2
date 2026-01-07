@@ -34,7 +34,7 @@ class RetrievalTools:
             return index.query(
                 namespace=self.namespace,
                 vector=query_embeddings,
-                top_k=5,
+                top_k=15,
                 include_values=False,
                 include_metadata=True,
             )
@@ -59,4 +59,5 @@ class RetrievalTools:
             logger.info(f"Registered tool: {name}")
         logger.info("="*40)
         
+
 
